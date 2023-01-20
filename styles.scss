@@ -1,0 +1,783 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
+
+:root {
+    --Blue: #66E2DC;
+    --Red: #FA7453;
+    --Yellow: #FFB964;
+    --White: #FCFAF9;
+    --Black: #191826;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-color: var(--White);
+    position: relative;
+
+    font-family: 'IBM Plex Sans', sans-serif;
+    position: relative;
+
+    background-image: url('./starter-code/assets/bg-main-mobile.png');
+    background-repeat: no-repeat;
+    background-position-x: 20px;
+    background-position-y: -240px;
+    background-attachment: local;
+
+    @media only screen and (min-width: 768px) {
+        background-image: url('./starter-code/assets/./bg-main-tablet.png');
+        background-position-x: -400px;
+        background-position-y: -260px;
+    }
+    @media only screen and (min-width: 1440px) {
+        background-image: url('./starter-code/assets/bg-main-desktop.png');
+        background-position-x: -320px;
+        background-position-y: -260px;
+    }
+}
+
+.header-container {
+    background-color: rgba(0, 255, 255, 0);
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container {
+    background-color: rgba(255, 87, 36, 0);
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-container {
+    background-color: rgba(0, 255, 255, 0);
+    display: flex;
+    flex-direction: column;
+}
+
+/////////////////////////
+
+.logo {
+    background-color: rgba(255, 0, 0, 0);
+    width: 146.09px;
+    height: 32px;
+    margin-left: 0.15px;
+
+    @media only screen and (min-width: 768px) {
+        margin-left: 3.15px;
+    }
+    @media only screen and (min-width: 1440px) {
+        margin-left: 1.15px;
+    }
+
+    &-container {
+        background-color: rgba(0, 255, 55, 0);
+        margin: 39.99px auto 0px;
+        width: 327px;
+        height: 32px;
+
+        @media only screen and (min-width: 768px) {
+            margin: 61.99px auto 0px;
+            width: 696px;
+        }
+        @media only screen and (min-width: 1440px) {
+            width: 1110px;
+        }
+    }
+}
+
+.pattern {
+    background-color: rgba(255, 255, 0, 0);
+    position: absolute;
+    display: none;
+
+    width: 266.67px;
+    height: 400px;
+
+    @media only screen and (min-width: 768px) {
+        left: 70%;
+        top: -32px;
+        display: unset;
+    }
+    @media only screen and (min-width: 1440px) {
+        width: 312px;
+        height: 468px;
+
+        left: 73.9%;
+        top: -40px;
+    }
+}
+
+.title {
+    background-color: rgba(0, 255, 0, 0);
+    width: 327px;
+    height: 320px;
+    margin: 64.01px auto 0px;
+    position: relative;
+
+    @media only screen and (min-width: 768px) {
+        width: 520px;
+        height: 332px;
+        margin: 95.01px 0px 0px 39px;
+    }
+    @media only screen and (min-width: 1440px) {
+        width: 1015.5px;
+        height: 318px;
+        margin: 127.01px 0px 0px 165px;
+    }
+
+    &__text {
+        background-color: rgba(255, 0, 0, 0);
+        width: 327px;
+        height: 144px;
+
+        font-family: 'IBM Plex Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 48px;
+        /* or 120% */
+
+        letter-spacing: -0.454545px;
+
+        color: var(--Black);
+
+        @media only screen and (min-width: 768px) {
+            width: 520px;
+            height: 192px;
+
+            font-size: 64px;
+            line-height: 64px;
+            /* or 100% */
+
+            letter-spacing: -0.727273px;
+        }
+        @media only screen and (min-width: 1440px) {
+            width: 1015px;
+            height: 176px;
+            
+            font-size: 88px;
+            line-height: 88px;
+            /* or 100% */
+            
+            letter-spacing: -1px;
+        }
+    }
+
+    &__description {
+        background-color: rgba(229, 255, 0, 0);
+        margin-top: 20px;
+
+        width: 327px;
+        height: 156px;
+
+        font-family: 'IBM Plex Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        /* or 162% */
+
+        color: var(--Black);
+
+        @media only screen and (min-width: 768px) {
+            width: 514px;
+            height: 112px;
+
+            font-size: 18px;
+            line-height: 28px;
+            /* or 156% */
+        }
+        @media only screen and (min-width: 1440px) {
+            margin-top: 40px;
+
+            width: 825px;
+            height: 102px;
+
+            font-size: 20px;
+            line-height: 34px;
+            /* or 170% */
+        }
+    }
+
+    &__container {
+        background-color: rgba(0, 17, 255, 0);
+        width: 375px;
+        margin: 0px auto 0px;
+        
+        @media only screen and (min-width: 768px) {
+            width: 768px;
+        }
+        @media only screen and (min-width: 1440px) {
+            width: 1440px;
+        }
+    }
+}
+
+.figure {
+    background-color: rgba(0, 255, 213, 0);
+    width: 375px;
+    height: 1024px;
+    margin: 68px auto 0px;
+    position: relative;
+
+    @media only screen and (min-width: 768px) {
+        width: 696px;
+        height: 834px;
+        margin: 111px 39px 0px 33px;
+    }
+    @media only screen and (min-width: 1440px) {
+        width: 1110px;
+        height: 928px;
+        margin: 108px 165px 0px 165px;
+    }
+
+    &__container {
+        background-color: rgba(0, 119, 255, 0);
+        width: 375px;
+        margin: 0px auto 0px;
+
+        @media only screen and (min-width: 768px) {
+            width: 768px;
+        }
+        @media only screen and (min-width: 1440px) {
+            width: 1440px;
+        }
+    }
+
+    &__background {
+        position: absolute;
+
+        margin-top: 98px;
+
+        width: 375px;
+        height: 600px;
+        background-color: var(--Black);
+        border-radius: 12px;
+
+        @media only screen and (min-width: 768px) {
+            margin-top: 138px;
+            
+            width: 696px;
+        }
+        @media only screen and (min-width: 1440px) {
+            margin-top: 213px;
+            
+            width: 1110px;
+        }
+
+        &__image {
+            width: 280px;
+            height: 420px;
+            margin: 0px 47px 0px 48px;
+
+            @media only screen and (min-width: 768px) {
+                margin: 0px 187px 0px 229px;
+                position: absolute;
+                top: -31px;
+                clip-path: polygon(0% 31px, 100% 31px, 100% 100%, 0% 100%);
+            }
+            @media only screen and (min-width: 1440px) {
+                margin: 0px 462px 0px 336px;
+                width: 312px;
+                height: 468px;
+                top: -40px;
+                clip-path: polygon(0% 39px, 100% 39px, 100% 100%, 0% 100%);
+            }
+        }
+    }
+
+    &__phone {
+        position: absolute;
+
+        width: 208.97px;
+        height: 430px;
+        margin: 0px 85.36px 0px 80.67px;
+
+        @media only screen and (min-width: 768px) {
+            width: 270.21px;
+            height: 556px;
+            margin: 0px 361.79px 0px 64px;
+        }
+        @media only screen and (min-width: 1440px) {
+            width: 312px;
+            height: 642px;
+            margin: 0px 696px 0px 102px;
+        }
+    }
+
+    &__card {
+        position: absolute;
+
+        margin: 478px auto 0px;
+
+        width: 375px;
+        height: 546px;        
+
+        background: var(--Red);
+        border-radius: 12px;
+
+        padding-top: 48px;
+
+        @media only screen and (min-width: 768px) {
+            width: 399px;
+            height: 546px;
+
+            margin: 288px 58px 0px 239px;
+        }
+        @media only screen and (min-width: 1440px) {
+            width: 446px;
+            height: 625px;
+
+            margin: 303px 95px 0px 569px;
+            padding-top: 58px;
+        }
+
+        &__title {
+            margin: 0px 37px 0px 36px;
+
+            width: 302px;
+            height: 40px;
+
+            font-family: 'IBM Plex Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 40px;
+            /* identical to box height, or 125% */
+
+            color: var(--White);
+
+            @media only screen and (min-width: 768px) {
+                margin: 0px 49px 0px 48px;
+            }
+            @media only screen and (min-width: 1440px) {
+                margin: 0px 59px 0px 54px;
+                
+                width: 333px;
+                height: 52px;
+                
+                font-size: 40px;
+                line-height: 52px;
+                /* identical to box height, or 130% */
+            }
+        }
+
+        &__description {
+            margin: 12px 37px 0px 36px;
+
+            width: 302px;
+            height: 140px;
+            
+            font-family: 'IBM Plex Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 28px;
+            /* or 156% */
+
+            color: var(--White);
+
+            @media only screen and (min-width: 768px) {
+                margin: 12px 49px 0px 48px;
+            }
+            @media only screen and (min-width: 1440px) {
+                margin: 22px 59px 0px 54px;
+                
+                width: 333px;
+                height: 170px;
+                
+                font-size: 20px;
+                line-height: 34px;
+                /* or 170% */
+            }
+        }
+
+        &__price {
+            display: flex;
+            width: 165px;
+            height: 52px;
+
+            margin: 36px 168px 0px 42px;
+
+            @media only screen and (min-width: 768px) {
+                margin: 36px 180px 0px 54px;
+            }
+            @media only screen and (min-width: 1440px) {
+                margin: 39px 227px 0px 54px;
+            }
+
+            &-amount {
+                height: 52px;
+                /*left: 0%;
+                right: 52.12%;
+                top: calc(50% - 52px/2);*/
+                margin: 0px 16px 0px 0px;
+                
+                font-family: 'IBM Plex Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 65px;
+                line-height: 52px;
+                /* identical to box height, or 80% */
+                
+                color: var(--White);
+
+                @media only screen and (min-width: 768px) {
+                    
+                }
+                @media only screen and (min-width: 1440px) {
+        
+                }
+            }
+
+            &-text {
+                height: 32px;
+                /*left: 57.58%;
+                right: 0%;
+                top: calc(50% - 32px/2 - 1px);*/
+                margin: 9px 0px 11px 0px;
+                
+                font-family: 'IBM Plex Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 32px;
+                /* identical to box height, or 160% */
+                
+                letter-spacing: -0.2px;
+                
+                color: var(--White);
+
+                @media only screen and (min-width: 768px) {
+                    
+                }
+                @media only screen and (min-width: 1440px) {
+        
+                }
+            }
+        }
+
+        &__apple {
+            width: 296px;
+            height: 61px;
+            /*left: 42px;
+            top: 1362px;*/
+            margin: 32px 37px 0px 42px;
+
+            background-color: var(--Black);
+            border-radius: 12px;
+            border: none;
+
+            display: flex;
+
+            @media only screen and (min-width: 768px) {
+                margin: 32px 49px 0px 54px;
+            }
+            @media only screen and (min-width: 1440px) {
+                width: 333px;
+                height: 61px;
+                margin: 46px 59px 0px 54px;
+            }
+
+            &-image {
+                width: 17.08px;
+                height: 20px;
+                
+                margin: 21px 7.92px 20px 77px;
+
+                @media only screen and (min-width: 768px) {
+                    
+                }
+                @media only screen and (min-width: 1440px) {
+                    margin: 21px 7.92px 20px 96px;
+                }
+            }
+
+            &-text {
+                height: 32px;
+                /*left: 17.61%;
+                right: 0%;
+                top: calc(50% - 32px/2);*/
+                margin: 15px 77px 14px 0px;
+                
+                font-family: 'IBM Plex Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 32px;
+                /* identical to box height, or 178% */
+                
+                text-align: center;
+                letter-spacing: -0.18px;
+                
+                color: var(--White);
+
+                @media only screen and (min-width: 768px) {
+                    
+                }
+                @media only screen and (min-width: 1440px) {
+                    margin: 15px 95px 14px 0px;
+                }
+            }
+
+            &:hover {
+                cursor: pointer;
+                background-color: var(--Blue);
+            }
+        }
+
+        &__android {
+            width: 296px;
+            height: 61px;
+            /*left: 42px;
+            top: 1439px;*/
+            margin: 16px 37px 48px 42px;
+            
+            background-color: var(--White);
+            border-radius: 12px;
+            border: none;
+
+            display: flex;
+
+            @media only screen and (min-width: 768px) {
+                margin: 16px 49px 48px 54px;
+            }
+            @media only screen and (min-width: 1440px) {
+                width: 333px;
+                height: 61px;
+                margin: 16px 59px 0px 54px;
+            }
+
+            &-image {
+                width: 16.7px;
+                height: 20px;
+
+                margin: 22px 7.8px 19px 59px;
+
+                @media only screen and (min-width: 768px) {
+                    
+                }
+                @media only screen and (min-width: 1440px) {
+                    margin: 22px 7.8px 19px 77px;
+                }
+            }
+
+            &-text {
+                height: 32px;
+                /*left: 13.73%;
+                right: -0.56%;
+                top: calc(50% - 32px/2);*/
+                margin: 15px 57.5px 14px 0px;
+                
+                font-family: 'IBM Plex Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 32px;
+                /* identical to box height, or 178% */
+                
+                text-align: center;
+                letter-spacing: -0.18px;
+                
+                color: var(--Black);
+
+                @media only screen and (min-width: 768px) {
+                    
+                }
+                @media only screen and (min-width: 1440px) {
+                    margin: 15px 76.5px 14px 0px;
+                }
+            }
+
+            &:hover {
+                cursor: pointer;
+                background-color: var(--Yellow);
+            }
+        }
+    }
+}
+
+.rightssocial {
+    background-color: rgba(255, 61, 255, 0);
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and (min-width: 768px) {
+        flex-direction: row;
+        width: 696px;
+        height: 143px;
+
+        margin: 87px 39px 85px 33px;
+    }
+    @media only screen and (min-width: 1440px) {
+        width: 1110px;
+        height: 79px;
+
+        margin: 87px 165px 91px 165px;
+    }
+
+    &-container {
+        background-color: rgba(0, 17, 255, 0);
+        width: 375px;
+        margin: 0px auto 0px;
+
+        @media only screen and (min-width: 768px) {
+            width: 768px;
+        }
+        @media only screen and (min-width: 1440px) {
+            width: 1440px;
+        }
+    }
+}
+
+.rights {
+    background-color: rgba(255, 171, 61, 0);
+    width: 327px;
+    height: 169px;
+
+    margin: 64px auto 0px;
+
+    @media only screen and (min-width: 768px) {
+        width: 366px;
+        height: 143px;
+
+        margin: 0px 0px 0px 0px;
+    }
+    @media only screen and (min-width: 1440px) {
+        display: flex;
+        width: 649.85px;
+        height: 79.01px;
+
+        margin: 0px 0px 0px 0px;
+    }
+
+    &-container {
+        background-color: rgba(38, 0, 255, 0);
+        width: 375px;
+        margin: 0px auto 0px;
+
+        @media only screen and (min-width: 768px) {
+            width: 366px;
+            margin-right: 230px;
+        }
+        @media only screen and (min-width: 1440px) {
+            width: 649.85px;
+            margin-right: 359px;
+        }
+    }
+
+    &__logo {
+        width: 146.09px;
+        height: 32px;
+        margin: 0.01px 0px 0px 1.15px;
+
+        @media only screen and (min-width: 768px) {
+            
+        }
+        @media only screen and (min-width: 1440px) {
+            margin: 0.01px 137.76px 0px 1.15px;
+        }
+    }
+
+    &__text {
+        background-color: rgba(255, 0, 0, 0);
+        width: 327px;
+        height: 105px;
+
+        margin: 32.01px auto 0px;
+
+        font-family: 'IBM Plex Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        /* or 162% */
+        
+        color: var(--Black);
+        padding-right: 28px;
+
+        &-email {
+            font-weight: 700;
+        }
+
+        @media only screen and (min-width: 768px) {
+            width: 366px;
+            height: 79px;
+
+            margin: 32.01px auto 0px;
+
+            padding-right: 0px;
+        }
+        @media only screen and (min-width: 1440px) {
+            margin: 0px auto 0px;
+        }
+    }
+}
+
+.social {
+    background-color: rgba(92, 255, 86, 0);
+    width: 100px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+
+    @media only screen and (min-width: 768px) {
+        
+    }
+    @media only screen and (min-width: 1440px) {
+        
+    }
+
+    &__facebook {
+        width: 20px;
+        height: 20px;
+        margin-right: 20px;
+
+        &:hover {
+            cursor: pointer;
+            filter: invert(69%) sepia(67%) saturate(4054%) hue-rotate(327deg) brightness(102%) contrast(96%);
+        }
+    }
+
+    &__instagram {
+        width: 20px;
+        height: 20px;
+        margin-right: 20px;
+
+        &:hover {
+            cursor: pointer;
+            filter: invert(69%) sepia(67%) saturate(4054%) hue-rotate(327deg) brightness(102%) contrast(96%);
+        }
+    }
+
+    &__twitter {
+        width: 20px;
+        height: 16.25px;
+
+        &:hover {
+            cursor: pointer;
+            filter: invert(69%) sepia(67%) saturate(4054%) hue-rotate(327deg) brightness(102%) contrast(96%);
+        }
+    }
+
+    &-container {
+        background-color: rgba(255, 0, 0, 0);
+        width: 327px;
+        height: 20px;
+        margin: 64px auto 80px;
+
+        @media only screen and (min-width: 768px) {
+            margin: 94px auto 29px;
+        }
+        @media only screen and (min-width: 1440px) {
+            margin: 29px auto 30px;
+        }    
+    }
+}
